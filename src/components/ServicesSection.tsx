@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Shirt, SquareDashedBottom, Droplets, Sparkles, ShoppingBag, Clock } from 'lucide-react';
+import { Shirt, SquareDashedBottom, Droplets, Sparkles, ShoppingBag, Clock, Boot, Eraser, Sofa, Briefcase } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const services = [
@@ -45,6 +45,34 @@ const services = [
     icon: Clock,
     color: "bg-rose-50 text-rose-600",
     delay: "200"
+  },
+  {
+    title: "Shoe Cleaning",
+    description: "Restore your footwear to like-new condition with our expert shoe cleaning service.",
+    icon: Boot,
+    color: "bg-orange-50 text-orange-600",
+    delay: "0"
+  },
+  {
+    title: "Carpet Cleaning",
+    description: "Deep cleaning solutions for carpets to remove stains, odors, and allergens.",
+    icon: Eraser,
+    color: "bg-teal-50 text-teal-600",
+    delay: "100"
+  },
+  {
+    title: "Sofa Cleaning",
+    description: "Refresh your upholstery with our professional sofa cleaning services.",
+    icon: Sofa,
+    color: "bg-indigo-50 text-indigo-600",
+    delay: "200"
+  },
+  {
+    title: "Bag Cleaning",
+    description: "Specialized care for handbags, backpacks, and luggage of all types and materials.",
+    icon: Briefcase,
+    color: "bg-pink-50 text-pink-600",
+    delay: "0"
   }
 ];
 
@@ -57,7 +85,7 @@ const ServicesSection = () => {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">Our Services</h2>
           <p className="text-muted-foreground">
-            From everyday essentials to special care items, we provide comprehensive solutions for all your laundry needs.
+            From everyday essentials to special care items, we provide comprehensive solutions for all your laundry and cleaning needs.
           </p>
         </div>
         
