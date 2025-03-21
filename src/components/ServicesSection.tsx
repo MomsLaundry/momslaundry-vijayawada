@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Shirt, SquareDashedBottom, Droplets, Sparkles, ShoppingBag, Clock, Boot, Eraser, Sofa, Briefcase } from 'lucide-react';
+import { Shirt, SquareDashedBottom, Droplets, Sparkles, ShoppingBag, Clock, Footprints, Eraser, Sofa, Briefcase } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const services = [
@@ -49,7 +49,7 @@ const services = [
   {
     title: "Shoe Cleaning",
     description: "Restore your footwear to like-new condition with our expert shoe cleaning service.",
-    icon: Boot,
+    icon: Footprints,
     color: "bg-orange-50 text-orange-600",
     delay: "0"
   },
