@@ -36,7 +36,7 @@ const ContactSection = () => {
               <ContactInfo 
                 icon={Phone} 
                 title="Phone" 
-                content="(555) 123-4567" 
+                content="(630) 178-4568" 
                 className="bg-laundry-500"
               />
               <ContactInfo 

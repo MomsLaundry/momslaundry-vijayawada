@@ -71,7 +71,7 @@ const ChatBox = () => {
       } else {
         // Generic response if no keyword match
         const genericMessage: ChatMessageProps = {
-          message: "Thank you for your message. Our team will get back to you soon. If you need immediate assistance, please call us at (555) 123-4567.",
+          message: "Thank you for your message. Our team will get back to you soon. If you need immediate assistance, please call us at (630) 178-4568.",
           isUser: false,
           timestamp: new Date()
         };
