@@ -27,7 +27,7 @@ const ChatBox = () => {
   // Auto-responses based on keywords
   const autoResponses: Record<string, string> = {
     "price": "Our pricing starts at $1.50 per pound for wash & fold service. We also offer pickup and delivery for a small fee.",
-    "hours": "We're open Monday through Saturday from 8am to 7pm. We're closed on Sundays.",
+    "hours": "We're open Monday through Saturday from 8AM to 8PM. We're closed on Sundays.",
     "delivery": "Yes, we offer pickup and delivery! The fee varies based on your location, typically between $5-10.",
     "time": "Turnaround time is usually 24-48 hours, but we also offer express service for an additional fee.",
     "location": "We're located at 123 Clean Street, Freshville, FL 12345."

@@ -54,7 +54,7 @@ const ContactSection = () => {
               <ContactInfo 
                 icon={Clock} 
                 title="Business Hours" 
-                content="Mon-Sat: 8am - 7pm, Sunday: Closed" 
+                content="MON-SAT: 8AM-8PM, Sunday: Closed" 
                 className="bg-amber-500"
               />
             </div>
