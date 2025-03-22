@@ -69,8 +69,8 @@ const HomePage = () => {
               <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-laundry-200 to-laundry-400 opacity-75 blur"></div>
               <div className="glass-panel p-8 relative animate-fade-in-up delay-100">
                 <img 
-                  src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
-                  alt="Fresh folded laundry" 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                  alt="Woman with freshly laundered clothes" 
                   className="w-full h-64 object-cover rounded-lg mb-6"
                 />
                 <h3 className="text-xl font-semibold mb-4 text-center">Fresh & Clean Guarantee</h3>

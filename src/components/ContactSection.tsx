@@ -6,14 +6,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from '@/lib/utils';
 
-const ContactInfo = ({ icon: Icon, title, content, className }: { icon: any, title: string, content: string, className?: string }) => (
+const ContactInfo = ({ icon: Icon, title, content, className, contentClass }: { icon: any, title: string, content: React.ReactNode, className?: string, contentClass?: string }) => (
   <div className="flex items-start space-x-3">
     <div className={cn("flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center", className)}>
       <Icon className="h-5 w-5 text-white" />
     </div>
     <div>
       <h4 className="font-medium">{title}</h4>
-      <p className="text-muted-foreground">{content}</p>
+      <div className={cn("text-muted-foreground", contentClass)}>{content}</div>
     </div>
   </div>
 );
@@ -36,7 +36,13 @@ const ContactSection = () => {
               <ContactInfo 
                 icon={Phone} 
                 title="Phone" 
-                content="(630) 178-4568" 
+                content={
+                  <div className="space-y-1">
+                    <p>(630) 178-4568</p>
+                    <p>9059986023</p>
+                    <p>08663581183</p>
+                  </div>
+                } 
                 className="bg-laundry-500"
               />
               <ContactInfo 
@@ -47,9 +53,15 @@ const ContactSection = () => {
               />
               <ContactInfo 
                 icon={MapPin} 
-                title="Location" 
+                title="Main Branch" 
                 content="Back Side, 4, 179/2, Chinmaya Dhyana Mandir St, Ramavarappadu, Vijayawada, Andhra Pradesh 521108" 
                 className="bg-emerald-500"
+              />
+              <ContactInfo 
+                icon={MapPin} 
+                title="Sub Branch" 
+                content="Rajasree Towers, Shop No.11, Kamayyathopu, Vijayawada-7" 
+                className="bg-purple-500"
               />
               <ContactInfo 
                 icon={Clock} 
