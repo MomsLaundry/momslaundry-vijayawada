@@ -42,13 +42,13 @@ const ContactSection = () => {
               <ContactInfo 
                 icon={Mail} 
                 title="Email" 
-                content="hello@momslaundry.com" 
+                content="cs.momslaundry@gmail.com" 
                 className="bg-blue-500"
               />
               <ContactInfo 
                 icon={MapPin} 
                 title="Location" 
-                content="123 Clean Street, Freshville, FL 12345" 
+                content="Back Side, 4, 179/2, Chinmaya Dhyana Mandir St, Ramavarappadu, Vijayawada, Andhra Pradesh 521108" 
                 className="bg-emerald-500"
               />
               <ContactInfo 

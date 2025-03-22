@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, X } from 'lucide-react';
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -8,7 +7,6 @@ import ChatMessage, { ChatMessageProps } from './ChatMessage';
 import ChatButton from './ChatButton';
 import { useToast } from "@/hooks/use-toast";
 
-// Initial welcome message from support
 const INITIAL_MESSAGES: ChatMessageProps[] = [
   {
     message: "Hello! Welcome to Mom's Laundry. How can we help you today?",
@@ -24,13 +22,12 @@ const ChatBox = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
-  // Auto-responses based on keywords
   const autoResponses: Record<string, string> = {
     "price": "Our pricing starts at $1.50 per pound for wash & fold service. We also offer pickup and delivery for a small fee.",
     "hours": "We're open Monday through Saturday from 8AM to 8PM. We're closed on Sundays.",
     "delivery": "Yes, we offer pickup and delivery! The fee varies based on your location, typically between $5-10.",
     "time": "Turnaround time is usually 24-48 hours, but we also offer express service for an additional fee.",
-    "location": "We're located at 123 Clean Street, Freshville, FL 12345."
+    "location": "We're located at Back Side, 4, 179/2, Chinmaya Dhyana Mandir St, Ramavarappadu, Vijayawada, Andhra Pradesh 521108."
   };
 
   const getAutoResponse = (message: string): string | null => {
@@ -46,7 +43,6 @@ const ChatBox = () => {
   const handleSend = () => {
     if (!newMessage.trim()) return;
 
-    // Add user message
     const userMessage: ChatMessageProps = {
       message: newMessage,
       isUser: true,
@@ -56,9 +52,7 @@ const ChatBox = () => {
     setMessages(prev => [...prev, userMessage]);
     setNewMessage('');
 
-    // Simulate typing delay before sending auto-response
     setTimeout(() => {
-      // Check for auto-response
       const autoResponse = getAutoResponse(newMessage);
       
       if (autoResponse) {
@@ -69,7 +63,6 @@ const ChatBox = () => {
         };
         setMessages(prev => [...prev, responseMessage]);
       } else {
-        // Generic response if no keyword match
         const genericMessage: ChatMessageProps = {
           message: "Thank you for your message. Our team will get back to you soon. If you need immediate assistance, please call us at (630) 178-4568.",
           isUser: false,
@@ -77,7 +70,7 @@ const ChatBox = () => {
         };
         setMessages(prev => [...prev, genericMessage]);
       }
-    }, 1000); // 1 second delay
+    }, 1000);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -86,12 +79,10 @@ const ChatBox = () => {
     }
   };
 
-  // Auto-scroll to bottom when new messages arrive
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  // Show a toast notification when chat is first opened
   useEffect(() => {
     if (isOpen) {
       toast({

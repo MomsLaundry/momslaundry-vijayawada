@@ -56,11 +56,11 @@ const AboutSection = () => {
             <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-6 shadow-lg max-w-xs animate-fade-in-up" style={{ animationDelay: '300ms' }}>
               <div className="flex items-center space-x-4 mb-3">
                 <div className="w-12 h-12 rounded-full bg-laundry-100 flex items-center justify-center">
-                  <span className="text-laundry-600 text-xl font-semibold">15</span>
+                  <span className="text-laundry-600 text-xl font-semibold">3</span>
                 </div>
                 <div>
                   <h4 className="font-semibold">Years Experience</h4>
-                  <p className="text-sm text-muted-foreground">Trusted service since 2009</p>
+                  <p className="text-sm text-muted-foreground">Trusted service since 2021</p>
                 </div>
               </div>
             </div>
