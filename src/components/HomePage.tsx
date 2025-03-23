@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Award, Clock, Map, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -12,8 +11,59 @@ import {
   TableHeader, 
   TableRow 
 } from "@/components/ui/table";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { 
+  Card, 
+  CardContent, 
+  CardDescription, 
+  CardFooter, 
+  CardHeader, 
+  CardTitle 
+} from "@/components/ui/card";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
 
 const HomePage = () => {
+  // Customer pickup form state
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  
+  // Define the form schema
+  const formSchema = z.object({
+    name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+    mobile: z.string().min(10, { message: "Please enter a valid mobile number." }),
+    location: z.string().min(2, { message: "Location is required." }),
+    address: z.string().min(5, { message: "Address must be at least 5 characters." }),
+  });
+  
+  // Initialize form
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      mobile: "",
+      location: "",
+      address: "",
+    },
+  });
+  
+  // Form submission handler
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
+    console.log(values);
+    setFormSubmitted(true);
+    setTimeout(() => setFormSubmitted(false), 3000); // Reset after 3 seconds
+    form.reset();
+  };
+
   return (
     <>
       {/* Hero Section - Women-focused laundry theme */}
@@ -93,66 +143,121 @@ const HomePage = () => {
         </div>
       </div>
       
-      {/* Pickup Service Table Section */}
+      {/* Customer Pickup Request Section */}
       <div className="bg-white py-16 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Get Pickup Service</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Request a Pickup</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Schedule a pickup at your convenience from any of our service locations across Vijayawada.
+              Fill in your details below and we'll schedule a pickup from your location at your convenience.
             </p>
           </div>
           
-          <div className="overflow-hidden rounded-lg border border-gray-200 shadow-md mx-auto max-w-4xl">
-            <Table>
-              <TableCaption>Mom's Laundry Pickup Service Locations</TableCaption>
-              <TableHeader>
-                <TableRow>
-                  <TableHead className="w-[250px]">Location</TableHead>
-                  <TableHead>Mobile Number</TableHead>
-                  <TableHead>Name</TableHead>
-                  <TableHead className="text-right">Address</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell className="font-medium">Main Branch</TableCell>
-                  <TableCell>9059986023</TableCell>
-                  <TableCell>Mrs. Padma</TableCell>
-                  <TableCell className="text-right">52-11-2, Gurunanak Colony, Vijayawada-8</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Sub Branch</TableCell>
-                  <TableCell>08663581183</TableCell>
-                  <TableCell>Mr. Ravi</TableCell>
-                  <TableCell className="text-right">Rajasree Towers, Shop No.11, Kamayyathopu, Vijayawada-7</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">City Center</TableCell>
-                  <TableCell>9059986023</TableCell>
-                  <TableCell>Mrs. Lakshmi</TableCell>
-                  <TableCell className="text-right">MG Road, Beside City Center, Vijayawada-10</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Express Branch</TableCell>
-                  <TableCell>08663581183</TableCell>
-                  <TableCell>Mr. Kumar</TableCell>
-                  <TableCell className="text-right">Near Railway Station, Gandhi Nagar, Vijayawada-3</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </div>
+          <Card className="max-w-2xl mx-auto shadow-md">
+            <CardHeader>
+              <CardTitle>Customer Information</CardTitle>
+              <CardDescription>
+                Enter your details for laundry pickup service
+              </CardDescription>
+            </CardHeader>
+            
+            <CardContent>
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Your full name" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="mobile"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Mobile Number</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Your contact number" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+                  
+                  <FormField
+                    control={form.control}
+                    name="location"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Location</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Your area in Vijayawada" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={form.control}
+                    name="address"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Full Address</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Your complete address for pickup" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-laundry-500 hover:bg-laundry-600 text-white font-medium"
+                  >
+                    Schedule Pickup
+                    <Phone className="ml-2 h-4 w-4" />
+                  </Button>
+                  
+                  {formSubmitted && (
+                    <div className="mt-4 p-3 bg-green-50 text-green-700 rounded-md flex items-center">
+                      <CheckCircle className="mr-2 h-5 w-5" />
+                      <span>Thank you! We'll contact you shortly to confirm your pickup.</span>
+                    </div>
+                  )}
+                </form>
+              </Form>
+            </CardContent>
+            
+            <CardFooter className="flex justify-between text-sm text-muted-foreground">
+              <p>Your data is secure and will only be used for pickup scheduling.</p>
+            </CardFooter>
+          </Card>
           
-          <div className="flex justify-center mt-8">
-            <Button size="lg" className="bg-laundry-500 hover:bg-laundry-600 text-white font-medium">
-              Schedule Pickup Now
-              <Phone className="ml-2 h-4 w-4" />
-            </Button>
+          <div className="mt-12 text-center">
+            <p className="text-lg font-medium mb-4">Our Service Locations in Vijayawada</p>
+            <div className="inline-flex flex-wrap justify-center gap-2">
+              <span className="px-3 py-1 bg-laundry-50 text-laundry-700 rounded-full">Main Branch</span>
+              <span className="px-3 py-1 bg-laundry-50 text-laundry-700 rounded-full">Gurunanak Colony</span>
+              <span className="px-3 py-1 bg-laundry-50 text-laundry-700 rounded-full">Kamayyathopu</span>
+              <span className="px-3 py-1 bg-laundry-50 text-laundry-700 rounded-full">City Center</span>
+            </div>
           </div>
         </div>
       </div>
       
-      {/* Features section with updated services imagery */}
+      {/* Features section with services imagery */}
       <div className="bg-laundry-50 py-24 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
