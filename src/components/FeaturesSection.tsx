@@ -19,22 +19,22 @@ const FeaturesSection = () => {
             {
               title: "Garment Pressing",
               description: "Professional pressing for all your garments to give them that crisp, wrinkle-free finish.",
-              image: "https://images.unsplash.com/photo-1514163061636-02db31852e84?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              image: "https://images.unsplash.com/photo-1585999058891-7c03f4efd240?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
             },
             {
               title: "Pickup & Delivery",
               description: "Free doorstep pickup and delivery throughout Vijayawada for your convenience.",
-              image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              image: "https://images.unsplash.com/photo-1551734413-5943d61e002a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
             },
             {
               title: "Express Service",
               description: "Same-day turnaround when you need your clothes cleaned in a hurry.",
-              image: "https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              image: "https://images.unsplash.com/photo-1576442261762-c99e5f8da691?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
             },
             {
               title: "Shoe Cleaning",
               description: "Professional shoe cleaning and restoration to keep your footwear looking brand new.",
-              image: "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              image: "https://images.unsplash.com/photo-1567613781487-50ab12673f36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
             },
           ].map((service, index) => (
             <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg group hover-lift">
