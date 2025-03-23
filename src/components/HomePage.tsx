@@ -3,6 +3,15 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Award, Clock, Map, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { 
+  Table, 
+  TableBody, 
+  TableCaption, 
+  TableCell, 
+  TableHead, 
+  TableHeader, 
+  TableRow 
+} from "@/components/ui/table";
 
 const HomePage = () => {
   return (
@@ -60,8 +69,8 @@ const HomePage = () => {
               <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-laundry-200 to-laundry-400 opacity-75 blur"></div>
               <div className="glass-panel p-8 relative animate-fade-in-up delay-100">
                 <img 
-                  src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                  alt="Woman folding laundry professionally" 
+                  src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                  alt="Woman with laundry clothes" 
                   className="w-full h-64 object-cover rounded-lg mb-6"
                 />
                 <h3 className="text-xl font-semibold mb-4 text-center">The Woman's Touch Guarantee</h3>
@@ -84,8 +93,67 @@ const HomePage = () => {
         </div>
       </div>
       
+      {/* Pickup Service Table Section */}
+      <div className="bg-white py-16 px-6">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Get Pickup Service</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Schedule a pickup at your convenience from any of our service locations across Vijayawada.
+            </p>
+          </div>
+          
+          <div className="overflow-hidden rounded-lg border border-gray-200 shadow-md mx-auto max-w-4xl">
+            <Table>
+              <TableCaption>Mom's Laundry Pickup Service Locations</TableCaption>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-[250px]">Location</TableHead>
+                  <TableHead>Mobile Number</TableHead>
+                  <TableHead>Name</TableHead>
+                  <TableHead className="text-right">Address</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell className="font-medium">Main Branch</TableCell>
+                  <TableCell>9059986023</TableCell>
+                  <TableCell>Mrs. Padma</TableCell>
+                  <TableCell className="text-right">52-11-2, Gurunanak Colony, Vijayawada-8</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">Sub Branch</TableCell>
+                  <TableCell>08663581183</TableCell>
+                  <TableCell>Mr. Ravi</TableCell>
+                  <TableCell className="text-right">Rajasree Towers, Shop No.11, Kamayyathopu, Vijayawada-7</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">City Center</TableCell>
+                  <TableCell>9059986023</TableCell>
+                  <TableCell>Mrs. Lakshmi</TableCell>
+                  <TableCell className="text-right">MG Road, Beside City Center, Vijayawada-10</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">Express Branch</TableCell>
+                  <TableCell>08663581183</TableCell>
+                  <TableCell>Mr. Kumar</TableCell>
+                  <TableCell className="text-right">Near Railway Station, Gandhi Nagar, Vijayawada-3</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </div>
+          
+          <div className="flex justify-center mt-8">
+            <Button size="lg" className="bg-laundry-500 hover:bg-laundry-600 text-white font-medium">
+              Schedule Pickup Now
+              <Phone className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+      </div>
+      
       {/* Features section with updated services imagery */}
-      <div className="bg-white py-24 px-6">
+      <div className="bg-laundry-50 py-24 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Premium Services</h2>
@@ -135,7 +203,7 @@ const HomePage = () => {
       </div>
       
       {/* Testimonial section */}
-      <div className="bg-laundry-50 py-24 px-6 relative overflow-hidden">
+      <div className="bg-white py-24 px-6 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 bg-laundry-100 rounded-full -translate-y-1/2 translate-x-1/3 blur-3xl opacity-60"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-laundry-200 rounded-full translate-y-1/2 -translate-x-1/3 blur-3xl opacity-40"></div>
         
@@ -191,7 +259,7 @@ const HomePage = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-white py-24 px-6">
+      <div className="bg-laundry-50 py-24 px-6">
         <div className="container mx-auto">
           <div className="bg-gradient-to-r from-laundry-500 to-laundry-600 rounded-2xl p-8 md:p-12 shadow-xl">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -213,8 +281,8 @@ const HomePage = () => {
               </div>
               <div className="hidden md:block">
                 <img 
-                  src="https://images.unsplash.com/photo-1469037784699-75dcf6d9a4ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" 
-                  alt="Woman folding laundry" 
+                  src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" 
+                  alt="Woman with laundry" 
                   className="rounded-xl w-full h-auto shadow-lg"
                 />
               </div>
