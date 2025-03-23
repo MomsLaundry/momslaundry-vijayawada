@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,16 +28,17 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <a href="/" className="text-2xl font-bold tracking-tighter text-laundry-700">
+        <Link to="/" className="text-2xl font-bold tracking-tighter text-laundry-700">
           Mom's<span className="text-laundry-500">Laundry</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#services" className="text-foreground hover:text-laundry-600 transition-colors">Services</a>
-          <a href="#about" className="text-foreground hover:text-laundry-600 transition-colors">About</a>
-          <a href="#pricing" className="text-foreground hover:text-laundry-600 transition-colors">Pricing</a>
-          <a href="#contact" className="text-foreground hover:text-laundry-600 transition-colors">Contact</a>
+          <Link to="/" className="text-foreground hover:text-laundry-600 transition-colors">Home</Link>
+          <Link to="/services" className="text-foreground hover:text-laundry-600 transition-colors">Services</Link>
+          <Link to="/about" className="text-foreground hover:text-laundry-600 transition-colors">About</Link>
+          <Link to="/pricing" className="text-foreground hover:text-laundry-600 transition-colors">Pricing</Link>
+          <Link to="/contact" className="text-foreground hover:text-laundry-600 transition-colors">Contact</Link>
           <Button className="bg-laundry-500 hover:bg-laundry-600 text-white">Book Now</Button>
         </div>
 
@@ -58,34 +60,41 @@ const Navbar = () => {
         )}
       >
         <div className="flex flex-col space-y-6">
-          <a 
-            href="#services" 
+          <Link
+            to="/"
+            className="text-lg font-medium py-2 border-b border-gray-100"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="/services"
             className="text-lg font-medium py-2 border-b border-gray-100"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Services
-          </a>
-          <a 
-            href="#about" 
+          </Link>
+          <Link
+            to="/about"
             className="text-lg font-medium py-2 border-b border-gray-100"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About
-          </a>
-          <a 
-            href="#pricing" 
+          </Link>
+          <Link
+            to="/pricing"
             className="text-lg font-medium py-2 border-b border-gray-100"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Pricing
-          </a>
-          <a 
-            href="#contact" 
+          </Link>
+          <Link
+            to="/contact"
             className="text-lg font-medium py-2 border-b border-gray-100"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Contact
-          </a>
+          </Link>
           <Button 
             className="bg-laundry-500 hover:bg-laundry-600 text-white mt-4"
             onClick={() => setIsMobileMenuOpen(false)}

@@ -2,21 +2,12 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Award, Clock, Map, Phone } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
-  const navigate = useNavigate();
-  
-  const handleViewServices = () => {
-    const servicesSection = document.getElementById('services');
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <>
-      {/* Hero Section - Redesigned with professional imagery */}
+      {/* Hero Section - Women-focused laundry theme */}
       <div className="relative min-h-screen flex items-center pt-24 pb-16 px-6 overflow-hidden">
         {/* Background with subtle pattern */}
         <div className="absolute inset-0 bg-gradient-to-b from-laundry-50 to-white z-0 opacity-70"></div>
@@ -28,14 +19,14 @@ const HomePage = () => {
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center z-10">
           <div className="flex flex-col space-y-6 animate-fade-in">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-laundry-100 text-laundry-800 text-sm font-medium mb-2 w-fit">
-              <span className="mr-1">⭐️</span> Premium Laundry Service in Vijayawada
+              <span className="mr-1">⭐️</span> Premium Women-Owned Laundry Service
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tighter">
-              Pristine Clothes, <br />
-              <span className="text-laundry-600">Happy Customers</span>
+              Laundry Care <br />
+              <span className="text-laundry-600">By Women, For Everyone</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-md">
-              Mom's Laundry brings professional care to your wardrobe with our premium wash, dry, and fold services in Vijayawada.
+              Mom's Laundry brings a woman's touch to professional care for your wardrobe with our premium services in Vijayawada.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -43,8 +34,8 @@ const HomePage = () => {
                 Book a Pickup
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="border-laundry-300 text-laundry-700 hover:bg-laundry-50" onClick={handleViewServices}>
-                View Services
+              <Button size="lg" variant="outline" className="border-laundry-300 text-laundry-700 hover:bg-laundry-50">
+                <Link to="/services">View Services</Link>
               </Button>
             </div>
             
@@ -69,13 +60,13 @@ const HomePage = () => {
               <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-laundry-200 to-laundry-400 opacity-75 blur"></div>
               <div className="glass-panel p-8 relative animate-fade-in-up delay-100">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                  alt="Woman with freshly laundered clothes" 
+                  src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                  alt="Woman folding laundry professionally" 
                   className="w-full h-64 object-cover rounded-lg mb-6"
                 />
-                <h3 className="text-xl font-semibold mb-4 text-center">Fresh & Clean Guarantee</h3>
+                <h3 className="text-xl font-semibold mb-4 text-center">The Woman's Touch Guarantee</h3>
                 <p className="text-center text-muted-foreground mb-6">
-                  We treat every piece of clothing with care, as if it were our own. Your satisfaction is our top priority.
+                  We treat every piece of clothing with a mother's care and attention to detail that only women can provide.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white bg-opacity-70 p-4 rounded-lg text-center">
@@ -93,47 +84,49 @@ const HomePage = () => {
         </div>
       </div>
       
-      {/* Features section with imagery */}
+      {/* Features section with updated services imagery */}
       <div className="bg-white py-24 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Mom's Laundry?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Premium Services</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We combine professional expertise with personalized care to deliver the best laundry experience in Vijayawada.
+              Experience our specialized laundry services with a woman's attention to detail and care.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             {[
               {
-                icon: Clock,
-                title: "Fast Turnaround",
-                description: "Get your clean clothes back within 24 hours, perfect for busy professionals and families.",
-                image: "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                title: "Garment Pressing",
+                description: "Professional pressing for all your garments to give them that crisp, wrinkle-free finish.",
+                image: "https://images.unsplash.com/photo-1514163061636-02db31852e84?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
               },
               {
-                icon: Award,
-                title: "Premium Quality",
-                description: "We use high-quality products and professional-grade machines for superior results.",
-                image: "https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                title: "Pickup & Delivery",
+                description: "Free doorstep pickup and delivery throughout Vijayawada for your convenience.",
+                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
               },
               {
-                icon: Map,
-                title: "Convenient Pickup",
-                description: "Free pickup and delivery throughout Vijayawada, saving you time and hassle.",
-                image: "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                title: "Express Service",
+                description: "Same-day turnaround when you need your clothes cleaned in a hurry.",
+                image: "https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
               },
-            ].map((feature, index) => (
+              {
+                title: "Shoe Cleaning",
+                description: "Professional shoe cleaning and restoration to keep your footwear looking brand new.",
+                image: "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              },
+            ].map((service, index) => (
               <div key={index} className="bg-white rounded-xl border border-gray-100 shadow-sm hover-lift overflow-hidden">
                 <div className="h-48 overflow-hidden">
-                  <img src={feature.image} alt={feature.title} className="w-full h-full object-cover" />
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
-                  <div className="w-12 h-12 bg-laundry-100 rounded-full flex items-center justify-center mb-4">
-                    <feature.icon className="h-6 w-6 text-laundry-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
+                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                  <p className="text-muted-foreground mb-4">{service.description}</p>
+                  <Link to={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="text-laundry-600 font-medium hover:text-laundry-700 flex items-center">
+                    Learn more <ArrowRight className="ml-1 h-4 w-4" />
+                  </Link>
                 </div>
               </div>
             ))}
@@ -197,7 +190,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* CTA Section before going to other sections */}
+      {/* CTA Section */}
       <div className="bg-white py-24 px-6">
         <div className="container mx-auto">
           <div className="bg-gradient-to-r from-laundry-500 to-laundry-600 rounded-2xl p-8 md:p-12 shadow-xl">
@@ -220,29 +213,14 @@ const HomePage = () => {
               </div>
               <div className="hidden md:block">
                 <img 
-                  src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
-                  alt="Neatly folded laundry" 
+                  src="https://images.unsplash.com/photo-1469037784699-75dcf6d9a4ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" 
+                  alt="Woman folding laundry" 
                   className="rounded-xl w-full h-auto shadow-lg"
                 />
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* This is where the ServicesSection will render as imported in Index.tsx */}
-      <div id="services">
-        {/* ServicesSection will be here */}
-      </div>
-
-      {/* This is where the AboutSection will render as imported in Index.tsx */}
-      <div id="about">
-        {/* AboutSection will be here */}
-      </div>
-
-      {/* This is where the ContactSection will render as imported in Index.tsx */}
-      <div id="contact">
-        {/* ContactSection will be here */}
       </div>
     </>
   );
