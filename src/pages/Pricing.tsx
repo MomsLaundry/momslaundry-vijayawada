@@ -3,38 +3,148 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { CheckCircle } from 'lucide-react';
+import { 
+  Card, 
+  CardHeader, 
+  CardTitle, 
+  CardDescription, 
+  CardContent 
+} from '@/components/ui/card';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { CheckCircle, ArrowRight, Shield, Clock, Star, Award } from 'lucide-react';
 
-const PricingCard = ({ title, price, features, isPopular, buttonText = "Choose Plan" }: { 
-  title: string, 
-  price: string, 
-  features: string[], 
-  isPopular?: boolean,
-  buttonText?: string
+const ProfessionalServiceCard = ({ 
+  title, 
+  description, 
+  features, 
+  imageUrl, 
+  isPremium 
+}: { 
+  title: string;
+  description: string;
+  features: string[];
+  imageUrl: string;
+  isPremium?: boolean;
 }) => (
-  <div className={`bg-white rounded-xl overflow-hidden border ${isPopular ? 'border-laundry-500 shadow-lg' : 'border-gray-200'} relative`}>
-    {isPopular && (
-      <div className="absolute top-0 inset-x-0 bg-laundry-500 text-white text-center py-1 text-sm font-medium">
-        Most Popular
+  <Card className={`overflow-hidden h-full ${isPremium ? 'border-laundry-500' : 'border-gray-200'} transition-all duration-300 hover:shadow-lg relative`}>
+    {isPremium && (
+      <div className="absolute top-0 right-0 bg-laundry-500 text-white py-1 px-3 text-xs font-medium z-10 rounded-bl-lg">
+        Premium Service
       </div>
     )}
-    <div className={`p-8 ${isPopular ? 'pt-12' : ''}`}>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <div className="mb-6">
-        <span className="text-3xl font-bold">₹{price}</span>
-        <span className="text-muted-foreground">/kg</span>
-      </div>
-      <ul className="space-y-3 mb-8">
+    <div className="h-48 overflow-hidden">
+      <img 
+        src={imageUrl} 
+        alt={title} 
+        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+      />
+    </div>
+    <CardHeader className="pb-2">
+      <CardTitle className="text-xl">{title}</CardTitle>
+      <CardDescription>{description}</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <ul className="space-y-2 mb-6">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start gap-2">
             <CheckCircle className="h-5 w-5 text-laundry-500 flex-shrink-0 mt-0.5" />
-            <span>{feature}</span>
+            <span className="text-sm">{feature}</span>
           </li>
         ))}
       </ul>
-      <Button className={`w-full ${isPopular ? 'bg-laundry-500 hover:bg-laundry-600' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}>
-        {buttonText}
+      <Button className={`w-full ${isPremium ? 'bg-laundry-500 hover:bg-laundry-600' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}>
+        Inquire for Pricing <ArrowRight className="ml-2 h-4 w-4" />
       </Button>
+    </CardContent>
+  </Card>
+);
+
+const ServiceComparisonSection = () => (
+  <div className="mt-16 bg-gray-50 p-8 rounded-lg">
+    <h2 className="text-2xl font-bold mb-4 text-center">Service Comparison</h2>
+    <div className="overflow-x-auto">
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead className="w-[250px]">Service Features</TableHead>
+            <TableHead>Basic</TableHead>
+            <TableHead>Premium</TableHead>
+            <TableHead>Executive</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableCell className="font-medium">Turnaround Time</TableCell>
+            <TableCell>Standard</TableCell>
+            <TableCell>Express</TableCell>
+            <TableCell>Priority</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className="font-medium">Stain Treatment</TableCell>
+            <TableCell>Basic</TableCell>
+            <TableCell>Advanced</TableCell>
+            <TableCell>Professional</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className="font-medium">Fabric Care</TableCell>
+            <TableCell>Standard</TableCell>
+            <TableCell>Premium</TableCell>
+            <TableCell>Executive</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className="font-medium">Pickup & Delivery</TableCell>
+            <TableCell>Included</TableCell>
+            <TableCell>Included</TableCell>
+            <TableCell>Priority</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className="font-medium">Garment Pressing</TableCell>
+            <TableCell>Basic</TableCell>
+            <TableCell>Included</TableCell>
+            <TableCell>Premium</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className="font-medium">Garment Repairs</TableCell>
+            <TableCell>Not Included</TableCell>
+            <TableCell>Additional Fee</TableCell>
+            <TableCell>Included</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className="font-medium">Special Detergents</TableCell>
+            <TableCell>Eco-friendly</TableCell>
+            <TableCell>Premium</TableCell>
+            <TableCell>Premium+</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    </div>
+  </div>
+);
+
+const WhyChooseUsSection = () => (
+  <div className="mt-16 grid md:grid-cols-3 gap-8">
+    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center">
+      <div className="bg-laundry-50 p-3 rounded-full mb-4">
+        <Shield className="h-6 w-6 text-laundry-600" />
+      </div>
+      <h3 className="text-lg font-semibold mb-2">Premium Quality</h3>
+      <p className="text-gray-600">We use top-tier equipment and products to ensure your garments receive the best care possible.</p>
+    </div>
+    
+    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center">
+      <div className="bg-laundry-50 p-3 rounded-full mb-4">
+        <Clock className="h-6 w-6 text-laundry-600" />
+      </div>
+      <h3 className="text-lg font-semibold mb-2">Timely Service</h3>
+      <p className="text-gray-600">We value your time and ensure your laundry is processed and delivered according to schedule.</p>
+    </div>
+    
+    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center">
+      <div className="bg-laundry-50 p-3 rounded-full mb-4">
+        <Award className="h-6 w-6 text-laundry-600" />
+      </div>
+      <h3 className="text-lg font-semibold mb-2">Expert Care</h3>
+      <p className="text-gray-600">Our professionals are trained to handle all types of fabrics with the specific care they require.</p>
     </div>
   </div>
 );
@@ -47,81 +157,69 @@ const Pricing = () => {
         <section className="py-20 px-6">
           <div className="container mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Simple, Transparent Pricing</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Professional Laundry Services</h1>
               <p className="text-lg text-muted-foreground">
-                Choose the right laundry plan for your needs. All plans include free pickup and delivery within Vijayawada.
+                Experience the difference with our premium laundry care. Custom solutions tailored to your specific needs.
               </p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <PricingCard 
-                title="Basic Wash & Fold" 
-                price="60" 
+              <ProfessionalServiceCard 
+                title="Basic Care Service" 
+                description="Essential laundry care for everyday items"
                 features={[
-                  "Wash & Fold Service",
+                  "Professional Wash & Fold",
                   "Free Pickup & Delivery",
-                  "72-hour Turnaround",
+                  "Eco-friendly Detergents",
                   "Basic Stain Treatment",
-                  "Eco-friendly Detergents"
+                  "Satisfaction Guaranteed"
                 ]}
+                imageUrl="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
               />
               
-              <PricingCard 
-                title="Premium Care" 
-                price="80" 
+              <ProfessionalServiceCard 
+                title="Premium Care Service" 
+                description="Enhanced care for your valuable garments"
                 features={[
                   "Premium Wash & Fold",
                   "Free Pickup & Delivery",
-                  "48-hour Turnaround",
                   "Advanced Stain Treatment",
-                  "Premium Detergents & Softeners",
-                  "Garment Pressing Included"
+                  "Premium Detergents",
+                  "Garment Pressing Included",
+                  "Extended Fabric Protection"
                 ]}
-                isPopular
+                imageUrl="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                isPremium
               />
               
-              <PricingCard 
+              <ProfessionalServiceCard 
                 title="Executive Service" 
-                price="100" 
+                description="Luxury treatment for premium garments"
                 features={[
                   "Executive Wash & Fold",
                   "Priority Pickup & Delivery",
-                  "24-hour Express Turnaround",
                   "Professional Stain Removal",
                   "Premium Products & Pressing",
                   "Garment Repairs Included",
-                  "Shoe Cleaning Discount"
+                  "Personalized Care Instructions",
+                  "VIP Customer Support"
                 ]}
+                imageUrl="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
               />
             </div>
             
-            <div className="mt-20">
-              <h2 className="text-2xl font-bold mb-8 text-center">Additional Services</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[
-                  { service: "Dry Cleaning", price: "Starting at ₹200/item" },
-                  { service: "Garment Pressing Only", price: "₹40/item" },
-                  { service: "Shoe Cleaning", price: "₹150/pair" },
-                  { service: "Express 4-hour Service", price: "+₹100 surcharge" },
-                  { service: "Bedding & Linens", price: "₹80/kg" },
-                  { service: "Curtains & Drapes", price: "₹90/kg" },
-                  { service: "Minor Repairs", price: "Starting at ₹50" },
-                  { service: "Stain Removal", price: "Starting at ₹70" }
-                ].map((item, index) => (
-                  <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="font-medium mb-2">{item.service}</h3>
-                    <p className="text-laundry-600 font-semibold">{item.price}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <ServiceComparisonSection />
             
-            <div className="mt-16 bg-laundry-50 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold mb-4">Corporate Packages</h3>
-              <p className="mb-4">
-                We offer special pricing for businesses, hotels, and corporate clients. Contact us for customized quotes and service plans tailored to your specific needs.
+            <WhyChooseUsSection />
+            
+            <div className="mt-16 bg-laundry-50 p-8 rounded-xl text-center">
+              <h3 className="text-2xl font-semibold mb-4">Corporate & Bulk Service Solutions</h3>
+              <p className="mb-6 max-w-3xl mx-auto">
+                We offer tailored solutions for businesses, hotels, and corporate clients. Our team will create a custom service plan to meet your organization's specific requirements and volume needs.
               </p>
-              <Button className="bg-laundry-500 hover:bg-laundry-600">Contact for Corporate Rates</Button>
+              <Button className="bg-laundry-500 hover:bg-laundry-600">
+                Request a Custom Quote
+              </Button>
             </div>
           </div>
         </section>
