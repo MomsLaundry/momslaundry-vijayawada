@@ -94,7 +94,7 @@ export const services = [
     icon: Sparkles,
     color: "bg-violet-50 text-violet-600",
     delay: "0",
-    image: "https://images.unsplash.com/photo-1551761429-8232f9f5955c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     process: [
       "Light steaming to relax fabrics",
       "Professional pressing with industrial equipment",
@@ -108,7 +108,7 @@ export const services = [
       "Preserved garment structure",
       "Ready-to-wear convenience"
     ],
-    detailImage: "https://images.unsplash.com/photo-1551761429-8232f9f5955c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    detailImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     detailContent: "Our expert Garment Pressing service delivers immaculately finished clothing that makes a lasting impression. We begin with a gentle steaming process to relax fibers and prepare them for pressing. Our professional equipment and techniques ensure precise attention to details like collars, cuffs, pleats, and seams. We adjust temperatures based on fabric type to prevent damage while achieving optimal results."
   },
   {
@@ -118,7 +118,7 @@ export const services = [
     icon: ShoppingBag,
     color: "bg-emerald-50 text-emerald-600",
     delay: "100",
-    image: "https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     process: [
       "Schedule pickup through app, website, or phone",
       "Contactless collection from your door",
@@ -132,7 +132,7 @@ export const services = [
       "Secure handling procedures",
       "Contactless options available"
     ],
-    detailImage: "https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    detailImage: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     detailContent: "Our Pickup & Delivery service brings convenience to your laundry routine. Simply schedule your preferred time through our mobile app, website, or by phone, and our professional team will collect your items directly from your doorstep. We offer contactless options and secure handling throughout the process. You'll receive real-time notifications about your order status, and when your items are ready, we'll deliver them back to you at your scheduled time."
   },
   {
