@@ -70,7 +70,7 @@ export const services = [
     icon: Droplets,
     color: "bg-amber-50 text-amber-600",
     delay: "200",
-    image: "https://images.unsplash.com/photo-1584813470613-5b1c1cad3d69?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1626806787461-102c1a7f1c0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     process: [
       "Stain analysis and identification",
       "Application of specialized pre-treatments",
@@ -84,7 +84,7 @@ export const services = [
       "Safe for colored and delicate fabrics",
       "Prevents fabric damage"
     ],
-    detailImage: "https://images.unsplash.com/photo-1584813470613-5b1c1cad3d69?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    detailImage: "https://images.unsplash.com/photo-1626806787461-102c1a7f1c0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     detailContent: "Our Deep Stain Removal service tackles even the most stubborn stains with precision and expertise. We begin by analyzing the stain type and fabric composition to determine the most effective treatment approach. Our technicians apply specialized pre-treatments and use targeted techniques specific to each stain type, whether it's wine, oil, ink, or other challenging substances. We work carefully to ensure the process is safe for the fabric's color and integrity."
   },
   {
@@ -118,7 +118,7 @@ export const services = [
     icon: ShoppingBag,
     color: "bg-emerald-50 text-emerald-600",
     delay: "100",
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1603400521630-9f2de124b33b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     process: [
       "Schedule pickup through app, website, or phone",
       "Contactless collection from your door",
@@ -132,7 +132,7 @@ export const services = [
       "Secure handling procedures",
       "Contactless options available"
     ],
-    detailImage: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    detailImage: "https://images.unsplash.com/photo-1603400521630-9f2de124b33b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     detailContent: "Our Pickup & Delivery service brings convenience to your laundry routine. Simply schedule your preferred time through our mobile app, website, or by phone, and our professional team will collect your items directly from your doorstep. We offer contactless options and secure handling throughout the process. You'll receive real-time notifications about your order status, and when your items are ready, we'll deliver them back to you at your scheduled time."
   },
   {
