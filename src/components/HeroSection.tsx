@@ -60,8 +60,8 @@ const HeroSection = () => {
             <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-laundry-200 to-laundry-400 opacity-75 blur"></div>
             <div className="glass-panel p-8 relative animate-fade-in-up delay-100">
               <img 
-                src="https://images.unsplash.com/photo-1682695796954-bad0d0f59ff1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                alt="Woman with laundry clothes" 
+                src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                alt="Woman doing laundry" 
                 className="w-full h-64 object-cover rounded-lg mb-6 shadow-md"
               />
               <h3 className="text-xl font-semibold mb-4 text-center">The Woman's Touch Guarantee</h3>

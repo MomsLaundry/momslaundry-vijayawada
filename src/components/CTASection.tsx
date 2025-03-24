@@ -27,8 +27,8 @@ const CTASection = () => {
             </div>
             <div className="hidden md:block">
               <img 
-                src="https://images.unsplash.com/photo-1578353022142-09264fd64295?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" 
-                alt="Professional laundry service" 
+                src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" 
+                alt="Woman doing laundry" 
                 className="rounded-xl w-full h-auto shadow-lg"
               />
             </div>
