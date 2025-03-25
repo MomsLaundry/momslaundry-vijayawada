@@ -28,8 +28,16 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold tracking-tighter text-laundry-700">
-          Mom's<span className="text-laundry-500">Laundry</span>
+        <Link to="/" className="flex items-center space-x-2">
+          <img 
+            src="/lovable-uploads/e622777a-8460-4f3e-9d07-6e2856f0c865.png" 
+            alt="Mom's Laundry Logo" 
+            className="h-10 w-10"
+          />
+          <span className="text-2xl font-bold tracking-tighter">
+            <span className="text-black">Mom's</span>
+            <span className="text-[#33C3F0]">Laundry</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -39,7 +47,7 @@ const Navbar = () => {
           <Link to="/about" className="text-foreground hover:text-laundry-600 transition-colors">About</Link>
           <Link to="/pricing" className="text-foreground hover:text-laundry-600 transition-colors">Pricing</Link>
           <Link to="/contact" className="text-foreground hover:text-laundry-600 transition-colors">Contact</Link>
-          <Button className="bg-laundry-500 hover:bg-laundry-600 text-white">Book Now</Button>
+          <Button className="bg-[#33C3F0] hover:bg-[#29a7d0] text-white">Book Now</Button>
         </div>
 
         {/* Mobile Navigation Trigger */}
@@ -96,7 +104,7 @@ const Navbar = () => {
             Contact
           </Link>
           <Button 
-            className="bg-laundry-500 hover:bg-laundry-600 text-white mt-4"
+            className="bg-[#33C3F0] hover:bg-[#29a7d0] text-white mt-4"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Book Now

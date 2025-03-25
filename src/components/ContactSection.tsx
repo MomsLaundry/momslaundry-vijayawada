@@ -28,7 +28,10 @@ const ContactSection = () => {
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-laundry-100 text-laundry-800 text-sm font-medium mb-2">
               Get In Touch
             </div>
-            <h2 className="section-title">Contact Us</h2>
+            <h2 className="text-3xl font-bold mb-6">
+              <span className="text-black">Contact</span> 
+              <span className="text-[#33C3F0]"> Us</span>
+            </h2>
             <p className="text-muted-foreground">
               Have questions about our services or want to schedule a pickup? Reach out to us and we'll be happy to help.
             </p>
@@ -59,31 +62,31 @@ const ContactSection = () => {
                     <p>08663581183</p>
                   </div>
                 } 
-                className="bg-laundry-500"
+                className="bg-[#33C3F0]"
               />
               <ContactInfo 
                 icon={Mail} 
                 title="Email" 
                 content="cs.momslaundry@gmail.com" 
-                className="bg-blue-500"
+                className="bg-[#33C3F0]"
               />
               <ContactInfo 
                 icon={MapPin} 
                 title="Main Branch" 
                 content="Back Side, 4, 179/2, Chinmaya Dhyana Mandir St, Ramavarappadu, Vijayawada, Andhra Pradesh 521108" 
-                className="bg-emerald-500"
+                className="bg-[#33C3F0]"
               />
               <ContactInfo 
                 icon={MapPin} 
                 title="Sub Branch" 
                 content="Rajasree Towers, Shop No.11, Kamayyathopu, Vijayawada-7" 
-                className="bg-purple-500"
+                className="bg-[#33C3F0]"
               />
               <ContactInfo 
                 icon={Clock} 
                 title="Business Hours" 
                 content="MON-SAT: 8AM-8PM, Sunday: Closed" 
-                className="bg-amber-500"
+                className="bg-[#33C3F0]"
               />
             </div>
           </div>
@@ -91,7 +94,10 @@ const ContactSection = () => {
           <div className="relative animate-fade-in" style={{ animationDelay: '100ms' }}>
             <div className="absolute -inset-1.5 bg-gradient-to-r from-laundry-100 to-laundry-200 rounded-2xl blur-md opacity-70"></div>
             <div className="glass-panel p-8 relative">
-              <h3 className="text-xl font-semibold mb-6">Send Us a Message</h3>
+              <h3 className="text-xl font-semibold mb-6">
+                <span className="text-black">Send Us a</span> 
+                <span className="text-[#33C3F0]"> Message</span>
+              </h3>
               <form className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -119,7 +125,7 @@ const ContactSection = () => {
                   </label>
                   <Textarea id="message" placeholder="Your message..." className="min-h-[120px]" />
                 </div>
-                <Button type="submit" className="w-full bg-laundry-500 hover:bg-laundry-600 text-white">
+                <Button type="submit" className="w-full bg-[#33C3F0] hover:bg-[#29a7d0] text-white">
                   Send Message
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
