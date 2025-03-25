@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from '@/lib/utils';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const ContactInfo = ({ icon: Icon, title, content, className, contentClass }: { icon: any, title: string, content: React.ReactNode, className?: string, contentClass?: string }) => (
   <div className="flex items-start space-x-3">
@@ -31,6 +32,21 @@ const ContactSection = () => {
             <p className="text-muted-foreground">
               Have questions about our services or want to schedule a pickup? Reach out to us and we'll be happy to help.
             </p>
+            
+            {/* Receptionist Photo */}
+            <div className="relative w-full h-64 rounded-xl overflow-hidden mb-6">
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
+                alt="Our friendly receptionist ready to assist you" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                <div className="p-4 text-white">
+                  <p className="font-medium">Our friendly staff is ready to assist you</p>
+                  <p className="text-sm opacity-80">Quick responses to all your inquiries</p>
+                </div>
+              </div>
+            </div>
             
             <div className="space-y-6 pt-4">
               <ContactInfo 
