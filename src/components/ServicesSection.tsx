@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Shirt, SquareDashedBottom, Droplets, Sparkles, ShoppingBag, Clock, Footprints, Eraser, Sofa, Briefcase } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -142,7 +141,7 @@ export const services = [
     icon: Clock,
     color: "bg-rose-50 text-rose-600",
     delay: "200",
-    image: "https://images.unsplash.com/photo-1633613286848-e6f43bbafb8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     process: [
       "Priority handling upon receipt",
       "Expedited cleaning process",
@@ -156,7 +155,7 @@ export const services = [
       "No compromise on quality",
       "Priority scheduling"
     ],
-    detailImage: "https://images.unsplash.com/photo-1633613286848-e6f43bbafb8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    detailImage: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     detailContent: "Our Express Service is designed for those urgent situations when you need clean clothes in a hurry. We prioritize your items immediately upon receipt and move them through an expedited cleaning process without compromising on quality. With a typical turnaround of just 3-6 hours, we ensure your garments receive proper care while meeting your tight deadline."
   },
   {
@@ -350,3 +349,4 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+

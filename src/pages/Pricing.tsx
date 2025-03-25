@@ -11,7 +11,7 @@ import {
   CardContent 
 } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { CheckCircle, ArrowRight, Shield, Clock, Star, Award } from 'lucide-react';
+import { CheckCircle, ArrowRight, Shield, Clock, Star, Award, BadgeDollarSign, BadgePercent, ShieldCheck, Tag } from 'lucide-react';
 
 const ProfessionalServiceCard = ({ 
   title, 
@@ -60,59 +60,59 @@ const ProfessionalServiceCard = ({
 );
 
 const ServiceComparisonSection = () => (
-  <div className="mt-16 bg-gray-50 p-8 rounded-lg">
+  <div className="mt-16 bg-gray-50 p-8 rounded-lg shadow-sm">
     <h2 className="text-2xl font-bold mb-4 text-center">Service Comparison</h2>
     <div className="overflow-x-auto">
       <Table>
         <TableHeader>
-          <TableRow>
-            <TableHead className="w-[250px]">Service Features</TableHead>
-            <TableHead>Basic</TableHead>
-            <TableHead>Premium</TableHead>
-            <TableHead>Executive</TableHead>
+          <TableRow className="bg-laundry-50">
+            <TableHead className="w-[250px] text-laundry-700">Service Features</TableHead>
+            <TableHead className="text-laundry-700">Basic</TableHead>
+            <TableHead className="text-laundry-700">Premium</TableHead>
+            <TableHead className="text-laundry-700">Executive</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           <TableRow>
             <TableCell className="font-medium">Turnaround Time</TableCell>
             <TableCell>Standard</TableCell>
-            <TableCell>Express</TableCell>
+            <TableCell className="bg-laundry-50">Express</TableCell>
             <TableCell>Priority</TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="font-medium">Stain Treatment</TableCell>
             <TableCell>Basic</TableCell>
-            <TableCell>Advanced</TableCell>
+            <TableCell className="bg-laundry-50">Advanced</TableCell>
             <TableCell>Professional</TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="font-medium">Fabric Care</TableCell>
             <TableCell>Standard</TableCell>
-            <TableCell>Premium</TableCell>
+            <TableCell className="bg-laundry-50">Premium</TableCell>
             <TableCell>Executive</TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="font-medium">Pickup & Delivery</TableCell>
             <TableCell>Included</TableCell>
-            <TableCell>Included</TableCell>
+            <TableCell className="bg-laundry-50">Included</TableCell>
             <TableCell>Priority</TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="font-medium">Garment Pressing</TableCell>
             <TableCell>Basic</TableCell>
-            <TableCell>Included</TableCell>
+            <TableCell className="bg-laundry-50">Included</TableCell>
             <TableCell>Premium</TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="font-medium">Garment Repairs</TableCell>
             <TableCell>Not Included</TableCell>
-            <TableCell>Additional Fee</TableCell>
+            <TableCell className="bg-laundry-50">Additional Fee</TableCell>
             <TableCell>Included</TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="font-medium">Special Detergents</TableCell>
             <TableCell>Eco-friendly</TableCell>
-            <TableCell>Premium</TableCell>
+            <TableCell className="bg-laundry-50">Premium</TableCell>
             <TableCell>Premium+</TableCell>
           </TableRow>
         </TableBody>
@@ -123,15 +123,15 @@ const ServiceComparisonSection = () => (
 
 const WhyChooseUsSection = () => (
   <div className="mt-16 grid md:grid-cols-3 gap-8">
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center">
+    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow duration-300">
       <div className="bg-laundry-50 p-3 rounded-full mb-4">
-        <Shield className="h-6 w-6 text-laundry-600" />
+        <ShieldCheck className="h-6 w-6 text-laundry-600" />
       </div>
       <h3 className="text-lg font-semibold mb-2">Premium Quality</h3>
       <p className="text-gray-600">We use top-tier equipment and products to ensure your garments receive the best care possible.</p>
     </div>
     
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center">
+    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow duration-300">
       <div className="bg-laundry-50 p-3 rounded-full mb-4">
         <Clock className="h-6 w-6 text-laundry-600" />
       </div>
@@ -139,7 +139,7 @@ const WhyChooseUsSection = () => (
       <p className="text-gray-600">We value your time and ensure your laundry is processed and delivered according to schedule.</p>
     </div>
     
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center">
+    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow duration-300">
       <div className="bg-laundry-50 p-3 rounded-full mb-4">
         <Award className="h-6 w-6 text-laundry-600" />
       </div>
@@ -154,10 +154,10 @@ const Pricing = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="pt-24 flex-1">
-        <section className="py-20 px-6">
+        <section className="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
           <div className="container mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Professional Laundry Services</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Professional Laundry Services</h1>
               <p className="text-lg text-muted-foreground">
                 Experience the difference with our premium laundry care. Custom solutions tailored to your specific needs.
               </p>
@@ -212,7 +212,12 @@ const Pricing = () => {
             
             <WhyChooseUsSection />
             
-            <div className="mt-16 bg-laundry-50 p-8 rounded-xl text-center">
+            <div className="mt-16 bg-laundry-50 p-8 rounded-xl text-center shadow-sm">
+              <div className="flex justify-center mb-4">
+                <div className="bg-white p-3 rounded-full shadow-sm">
+                  <BadgeDollarSign className="h-8 w-8 text-laundry-600" />
+                </div>
+              </div>
               <h3 className="text-2xl font-semibold mb-4">Corporate & Bulk Service Solutions</h3>
               <p className="mb-6 max-w-3xl mx-auto">
                 We offer tailored solutions for businesses, hotels, and corporate clients. Our team will create a custom service plan to meet your organization's specific requirements and volume needs.
