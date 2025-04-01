@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -30,7 +29,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
           <img 
-            src="/lovable-uploads/e622777a-8460-4f3e-9d07-6e2856f0c865.png" 
+            src="/lovable-uploads/a8ae7c6c-1cf3-44db-b8f1-5000c1d06fa2.png" 
             alt="Mom's Laundry Logo" 
             className="h-10 w-10"
           />

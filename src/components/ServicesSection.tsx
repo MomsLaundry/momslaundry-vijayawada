@@ -69,7 +69,7 @@ export const services = [
     icon: Droplets,
     color: "bg-amber-50 text-amber-600",
     delay: "200",
-    image: "https://images.unsplash.com/photo-1626806787461-102c1a7f1c0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1542728928-1413d1894ed1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     process: [
       "Stain analysis and identification",
       "Application of specialized pre-treatments",
@@ -83,7 +83,7 @@ export const services = [
       "Safe for colored and delicate fabrics",
       "Prevents fabric damage"
     ],
-    detailImage: "https://images.unsplash.com/photo-1626806787461-102c1a7f1c0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    detailImage: "https://images.unsplash.com/photo-1542728928-1413d1894ed1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     detailContent: "Our Deep Stain Removal service tackles even the most stubborn stains with precision and expertise. We begin by analyzing the stain type and fabric composition to determine the most effective treatment approach. Our technicians apply specialized pre-treatments and use targeted techniques specific to each stain type, whether it's wine, oil, ink, or other challenging substances. We work carefully to ensure the process is safe for the fabric's color and integrity."
   },
   {
@@ -141,7 +141,7 @@ export const services = [
     icon: Clock,
     color: "bg-rose-50 text-rose-600",
     delay: "200",
-    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://images.unsplash.com/photo-1613905780946-26b73b6f6e11?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     process: [
       "Priority handling upon receipt",
       "Expedited cleaning process",
@@ -155,7 +155,7 @@ export const services = [
       "No compromise on quality",
       "Priority scheduling"
     ],
-    detailImage: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    detailImage: "https://images.unsplash.com/photo-1613905780946-26b73b6f6e11?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     detailContent: "Our Express Service is designed for those urgent situations when you need clean clothes in a hurry. We prioritize your items immediately upon receipt and move them through an expedited cleaning process without compromising on quality. With a typical turnaround of just 3-6 hours, we ensure your garments receive proper care while meeting your tight deadline."
   },
   {
@@ -349,4 +349,3 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
-
