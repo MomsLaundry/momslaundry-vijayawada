@@ -18,11 +18,6 @@ const Contact = () => {
                 alt="Mom's Laundry Logo" 
                 className="h-40 w-40"
               />
-              <img 
-                src="/lovable-uploads/204c7a6b-0da1-48a8-83c0-920e6aaf9cc5.png" 
-                alt="Mom's Laundry Logo" 
-                className="h-36 w-36 ml-2"
-              />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-center">
               <span className="text-black">Contact</span> 

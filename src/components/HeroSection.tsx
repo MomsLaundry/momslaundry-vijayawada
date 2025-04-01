@@ -27,11 +27,6 @@ const HeroSection = () => {
                 alt="Mom's Laundry Logo" 
                 className="h-32 w-32 mb-4"
               />
-              <img 
-                src="/lovable-uploads/a8ae7c6c-1cf3-44db-b8f1-5000c1d06fa2.png" 
-                alt="Mom's Laundry Logo" 
-                className="h-24 w-24 mb-4 ml-2"
-              />
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tighter text-center md:text-left">
               <span className="text-black">Mom's</span>
