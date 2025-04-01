@@ -21,11 +21,18 @@ const HeroSection = () => {
           </div>
           
           <div className="flex flex-col items-center md:items-start mb-4">
-            <img 
-              src="/lovable-uploads/a8ae7c6c-1cf3-44db-b8f1-5000c1d06fa2.png" 
-              alt="Mom's Laundry Logo" 
-              className="h-24 w-24 mb-4"
-            />
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/e23a9a5c-dd36-4fc8-b974-4a40c055f7ce.png" 
+                alt="Mom's Laundry Logo" 
+                className="h-32 w-32 mb-4"
+              />
+              <img 
+                src="/lovable-uploads/a8ae7c6c-1cf3-44db-b8f1-5000c1d06fa2.png" 
+                alt="Mom's Laundry Logo" 
+                className="h-24 w-24 mb-4 ml-2"
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tighter text-center md:text-left">
               <span className="text-black">Mom's</span>
               <span className="text-[#33C3F0]"> Laundry</span>

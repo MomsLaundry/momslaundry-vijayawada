@@ -12,11 +12,18 @@ const Contact = () => {
       <main className="pt-24">
         <div className="container mx-auto px-6 py-12">
           <div className="flex flex-col items-center mb-8">
-            <img 
-              src="/lovable-uploads/204c7a6b-0da1-48a8-83c0-920e6aaf9cc5.png" 
-              alt="Mom's Laundry Logo" 
-              className="h-40 w-40 mb-6"
-            />
+            <div className="flex items-center justify-center mb-4">
+              <img 
+                src="/lovable-uploads/e23a9a5c-dd36-4fc8-b974-4a40c055f7ce.png" 
+                alt="Mom's Laundry Logo" 
+                className="h-40 w-40"
+              />
+              <img 
+                src="/lovable-uploads/204c7a6b-0da1-48a8-83c0-920e6aaf9cc5.png" 
+                alt="Mom's Laundry Logo" 
+                className="h-36 w-36 ml-2"
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold text-center">
               <span className="text-black">Contact</span> 
               <span className="text-[#33C3F0]">Us</span>
